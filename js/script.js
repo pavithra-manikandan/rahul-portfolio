@@ -241,34 +241,48 @@ window.addEventListener('load', () => {
 });
 
 
-// ===== TYPEWRITER — update phrases =====
-
+// ===== TYPEWRITER =====
 const phrases = [
-    'Rahul Srivathsan M',
-    'a Designer',
-    'a 3D & VFX Artist',
-    'an aspiring Editor',
+    { text: 'Rahul Srivathsan M',   em: 'M.'       },
+    { text: 'a Designer',           em: 'Designer'  },
+    { text: 'a 3D & VFX Artist',    em: 'Artist'    },
+    { text: 'an aspiring Editor',   em: 'Editor'    },
 ];
+
 let phraseIndex = 0, charIndex = 0, isDeleting = false;
 const el = document.querySelector('.typewriter-text');
 
 function typeWriter() {
     if (!el) return;
     const cur = phrases[phraseIndex];
-    el.textContent = isDeleting
-        ? cur.substring(0, charIndex - 1)
-        : cur.substring(0, charIndex + 1);
-    isDeleting ? charIndex-- : charIndex++;
+    const fullText = cur.text;
+    const emWord = cur.em;
+    const emStart = fullText.lastIndexOf(emWord.replace('.', ''));
+
+    if (!isDeleting) charIndex++;
+    else             charIndex--;
+
+    const slice = fullText.substring(0, charIndex);
+
+    if (charIndex >= emStart) {
+        // we've reached the em word — split and style it
+        const before = fullText.substring(0, emStart);
+        const emPart = slice.substring(emStart);
+        el.innerHTML = before + '<em>' + emPart + '</em>';
+    } else {
+        el.textContent = slice;
+    }
+
     let speed = isDeleting ? 45 : 90;
-    if (!isDeleting && charIndex === cur.length) {
-        speed = 2000; isDeleting = true;
+    if (!isDeleting && charIndex === fullText.length) {
+        speed = 2200; isDeleting = true;
     } else if (isDeleting && charIndex === 0) {
         isDeleting = false;
         phraseIndex = (phraseIndex + 1) % phrases.length;
-        speed = 350;
+        speed = 400;
     }
     setTimeout(typeWriter, speed);
 }
 document.addEventListener('DOMContentLoaded', typeWriter);
 
-console.log('%c Portfolio Loaded ✨', 'color: #67e8f9; font-size: 16px; font-weight: bold;');
+console.log('%c Portfolio Loaded ✨', 'color: #f5edcb; font-size: 16px; font-weight: bold;');

@@ -261,47 +261,52 @@ body {
     padding: 0 80px 0 64px;
 }
 
-/* Hello I'm + typewriter */
-.hero-greeting-row {
-    display: flex; align-items: baseline;
-    gap: 6px; margin-bottom: 0.5rem;
-    flex-wrap: wrap;
-}
+/* Hello I'm — static, larger */
 .hero-hello {
-    font-family: var(--font-nav);
-    font-size: 0.9rem; font-weight: 400;
-    letter-spacing: 2.5px; text-transform: uppercase;
-    color: rgba(255,255,255,0.35);
+    font-family: var(--font-serif);
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-weight: 400;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.4);
+    letter-spacing: 1px;
+    margin-bottom: 0.3rem;
+    display: block;
 }
-.typewriter-text {
-    font-family: var(--font-nav);
-    font-size: 0.9rem; font-weight: 500;
-    letter-spacing: 2.5px; text-transform: uppercase;
-    color: var(--gold-light);
-}
-.typewriter-cursor {
-    font-size: 0.9rem;
-    color: var(--gold-mid);
-    animation: blink 0.7s infinite;
-    font-weight: 300;
-}
-@keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: 0; } }
 
-/* THE BIG NAME */
+/* THE BIG TYPEWRITER NAME */
 .hero-big-name {
     font-family: var(--font-serif);
     font-weight: 700;
     font-size: clamp(3.8rem, 7.5vw, 7rem);
-    line-height: 0.95;
+    line-height: 1.0;
     letter-spacing: -1px;
     color: #ffffff;
     margin-bottom: 1.8rem;
     text-shadow: 0 0 120px rgba(192, 154, 94, 0.1);
+    min-height: 1.1em; /* prevents layout jump */
 }
-.hero-name-dot {
-    color: var(--gold-light);
+.typewriter-text {
+    font-family: var(--font-serif);
+    font-weight: 700;
+    font-size: inherit;
+    color: #ffffff;
+    letter-spacing: inherit;
+}
+/* italic words inside typewriter */
+.typewriter-text em {
     font-style: italic;
+    color: var(--gold-shimmer);
+    font-weight: 700;
 }
+.typewriter-cursor {
+    font-family: var(--font-serif);
+    font-size: inherit;
+    color: var(--gold-mid);
+    animation: blink 0.7s infinite;
+    font-weight: 100;
+    margin-left: 2px;
+}
+@keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: 0; } }
 
 /* Roles bar */
 .hero-roles-bar {
@@ -309,7 +314,7 @@ body {
     font-family: var(--font-nav);
     font-size: 0.68rem; font-weight: 500;
     letter-spacing: 3px; text-transform: uppercase;
-    color: rgba(255,255,255,0.3);
+    color: var(--gold-shimmer);
     margin-bottom: 3rem;
 }
 .hero-dot { color: var(--gold-mid); font-size: 1.1rem; line-height: 1; }
