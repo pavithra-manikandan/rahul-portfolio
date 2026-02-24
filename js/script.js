@@ -207,7 +207,9 @@ document.querySelectorAll('.skill-card-new, .cert-card, .masonry-card, .tc-card,
 // ===== SCROLL TO TOP =====
 const scrollTopBtn = document.createElement('button');
 scrollTopBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
-scrollTopBtn.style.cssText = `position:fixed;bottom:30px;right:30px;width:50px;height:50px;border-radius:50%;background:linear-gradient(135deg,#67e8f9,#22d3ee);color:#000;border:none;cursor:pointer;opacity:0;transition:all 0.3s ease;z-index:999;display:flex;align-items:center;justify-content:center;font-size:1.1rem;box-shadow:0 5px 20px rgba(103,232,249,0.4);`;
+
+
+scrollTopBtn.style.cssText = `position:fixed;bottom:30px;right:30px;width:50px;height:50px;border-radius:50%;background: linear-gradient(135deg, #C09A5E, #D4B483);color:#000;border:none;cursor:pointer;opacity:0;transition:all 0.3s ease;z-index:999;display:flex;align-items:center;justify-content:center;font-size:1.1rem;box-shadow: 0 5px 20px rgba(192, 154, 94, 0.35);`;
 document.body.appendChild(scrollTopBtn);
 window.addEventListener('scroll', () => { scrollTopBtn.style.opacity = window.pageYOffset > 300 ? '1' : '0'; scrollTopBtn.style.pointerEvents = window.pageYOffset > 300 ? 'all' : 'none'; });
 scrollTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
@@ -238,19 +240,33 @@ window.addEventListener('load', () => {
     setTimeout(() => { pre.style.opacity = '0'; setTimeout(() => pre.remove(), 500); }, 1500);
 });
 
-// ===== TYPEWRITER =====
-const phrases = ['Rahul Srivathsan M', 'a 3D & VFX Artist', 'an aspiring Editor', 'a Designer', ];
+
+// ===== TYPEWRITER — update phrases =====
+
+const phrases = [
+    'Rahul Srivathsan M',
+    'a Designer',
+    'a 3D & VFX Artist',
+    'an aspiring Editor',
+];
 let phraseIndex = 0, charIndex = 0, isDeleting = false;
 const el = document.querySelector('.typewriter-text');
 
 function typeWriter() {
     if (!el) return;
     const cur = phrases[phraseIndex];
-    el.textContent = isDeleting ? cur.substring(0, charIndex - 1) : cur.substring(0, charIndex + 1);
+    el.textContent = isDeleting
+        ? cur.substring(0, charIndex - 1)
+        : cur.substring(0, charIndex + 1);
     isDeleting ? charIndex-- : charIndex++;
-    let speed = isDeleting ? 60 : 100;
-    if (!isDeleting && charIndex === cur.length) { speed = 1800; isDeleting = true; }
-    else if (isDeleting && charIndex === 0) { isDeleting = false; phraseIndex = (phraseIndex + 1) % phrases.length; speed = 400; }
+    let speed = isDeleting ? 45 : 90;
+    if (!isDeleting && charIndex === cur.length) {
+        speed = 2000; isDeleting = true;
+    } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        phraseIndex = (phraseIndex + 1) % phrases.length;
+        speed = 350;
+    }
     setTimeout(typeWriter, speed);
 }
 document.addEventListener('DOMContentLoaded', typeWriter);

@@ -6,6 +6,9 @@
     <title>Rahul Srivathsan M - 3D Artist & Film Editor</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,700&family=Inter:wght@300;400;500;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -30,10 +33,12 @@
 
     <!-- Hero -->
     <section id="home" class="hero">
-        <div class="hero-background">
-            <div class="floating-element element-1"></div>
-            <div class="floating-element element-2"></div>
-        </div>
+
+        <!-- Gold radial glow -->
+        <div class="hero-glow"></div>
+        <div id="vanta-bg"></div>
+
+        <!-- Film strip -->
         <div class="film-strip-vertical">
             <div class="film-strip-track">
                 <div class="film-frame-vertical">
@@ -48,6 +53,7 @@
                     <img src="images/kuberaa.jpg" alt="Kuberaa" onerror="this.src='https://via.placeholder.com/200x280?text=Kuberaa'">
                     <div class="film-label-vertical">kuberaa</div>
                 </div>
+                <!-- duplicates for seamless loop -->
                 <div class="film-frame-vertical">
                     <img src="images/raghu-thatha.jpg" alt="Raghu Thatha" onerror="this.src='https://via.placeholder.com/200x280?text=Raghu+Thatha'">
                     <div class="film-label-vertical">raghu thatha</div>
@@ -65,22 +71,40 @@
             <div class="film-perf-right"></div>
         </div>
 
+        <!-- Hero content -->
         <div class="hero-content-right">
-            <h1 class="hero-name-new">
-                <p class="hero-greeting">Hello, I'm</p>
+
+            <!-- Hello I'm + typewriter -->
+            <div class="hero-greeting-row">
+                <span class="hero-hello">Hello, I'm </span>
                 <span class="typewriter-text"></span><span class="typewriter-cursor">|</span>
-            </h1>
-            <p class="hero-roles">Editor | Motion Graphics Artist | Movie Buff</p>
-            <div class="hero-quote">
-                <i class="fas fa-quote-left"></i>
-                <p>Raised in Chennai ; Fluent in Blender, Premiere Pro and Cinema</p>
             </div>
+
+            <!-- BIG NAME -->
+            <h1 class="hero-big-name">
+                Rahul<br>
+                Srivathsan<span class="hero-name-dot"> M.</span>
+            </h1>
+
+            <!-- Roles bar -->
+            <div class="hero-roles-bar">
+                <span>Film Editor</span>
+                <span class="hero-dot">·</span>
+                <span>3D Artist</span>
+                <span class="hero-dot">·</span>
+                <span>Colorist</span>
+            </div>
+
+            <!-- CTAs -->
             <div class="hero-cta">
                 <a href="#work" class="btn btn-primary">
                     <i class="fas fa-play"></i>
-                    <span>view my work</span>
+                    <span>View My Work</span>
                 </a>
+                <a href="#about" class="btn btn-ghost">About Me</a>
             </div>
+
+            <!-- Social -->
             <div class="social-links">
                 <a href="https://youtube.com/@wcstudiosoffl" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                 <a href="https://instagram.com/wcstudiosoffl" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
@@ -107,7 +131,6 @@
                     </div>
                 </div>
                 <div class="about-text">
-                    <!-- <h3>Passionate Filmmaker & 3D Artist</h3> -->
                     <p class="lead">I edit films, create motion graphics, and lose track of time doing both. Everything you see here is self-taught, built frame by frame, out of pure passion for visual storytelling.</p>
                     <div class="about-highlights">
                         <div class="highlight-item">
@@ -120,7 +143,7 @@
                         </div>
                         <div class="highlight-item">
                             <i class="fas fa-video"></i>
-                            <span>From launching WC Studios at 11 to editing feature films, the thread connecting it all is a simple bsession with making visuals that stick with you long after the screen goes dark.</span>
+                            <span>From launching WC Studios at 11 to editing feature films, the thread connecting it all is a simple obsession with making visuals that stick with you long after the screen goes dark.</span>
                         </div>
                     </div>
                     <div class="about-stats">
@@ -154,21 +177,20 @@
                 from school corridors to cinema screens
             </p>
 
-            <!-- Timeline — bigger alternating style -->
             <div class="timeline">
 
                 <div class="timeline-item" data-year="2008-2020">
                     <div class="timeline-icon"><i class="fas fa-school"></i></div>
                     <div class="timeline-content">
                         <h3>PSBB School</h3>
-                        <p class="timeline-period">2009 - 2024 </p>
+                        <p class="timeline-period">2009 - 2024</p>
                         <p>Where it all began. Started experimenting with animation and design at age 8. Created my first YouTube channel "Wow Creations" in 6th grade.</p>
                         <div class="timeline-badge"><i class="fas fa-star"></i> the beginning</div>
                     </div>
                     <div class="timeline-image"><i class="fas fa-graduation-cap"></i></div>
                 </div>
 
-                                <div class="timeline-item" data-year="2023">
+                <div class="timeline-item" data-year="2023">
                     <div class="timeline-icon"><i class="fas fa-certificate"></i></div>
                     <div class="timeline-content">
                         <h3>VanArts — 3D Modeling Diploma</h3>
@@ -183,12 +205,12 @@
                     <div class="timeline-image"><i class="fas fa-trophy"></i></div>
                 </div>
 
-                <div class="timeline-item" data-year="2020-2024">
+                <div class="timeline-item" data-year="2025-2028">
                     <div class="timeline-icon"><i class="fas fa-university"></i></div>
                     <div class="timeline-content">
                         <h3>Loyola College, Chennai</h3>
                         <p class="timeline-period">2025 — 2028</p>
-                        <p><strong>Bachelor of Multimedia</strong> — Diving deep into film editing, 3D animation, and design. </p>
+                        <p><strong>Bachelor of Multimedia</strong> — Diving deep into film editing, 3D animation, and design.</p>
                         <div class="timeline-skills">
                             <span><i class="fas fa-video"></i> film editing</span>
                             <span><i class="fas fa-cube"></i> 3d modeling</span>
@@ -197,8 +219,6 @@
                     </div>
                     <div class="timeline-image"><i class="fas fa-book-open"></i></div>
                 </div>
-
-
 
             </div>
 
@@ -363,7 +383,7 @@
                 </div>
                 <div class="masonry-row masonry-double">
                     <div class="masonry-card" data-project="poster-designs" data-cat="design">
-                        <div class="masonry-img"><img src="images/poster-designs.jpg" alt=""" onerror="this.src='https://via.placeholder.com/400x260?text=Posters'"></div>
+                        <div class="masonry-img"><img src="images/poster-designs.jpg" alt="" onerror="this.src='https://via.placeholder.com/400x260?text=Posters'"></div>
                         <div class="masonry-num">06</div><div class="masonry-year">2023</div>
                         <div class="masonry-info"><div class="masonry-cat">graphic design</div><div class="masonry-title">Movie Posters</div><div class="masonry-sub">Design Collection</div></div>
                         <div class="masonry-arrow">↗</div>
@@ -433,7 +453,7 @@
                 <div class="footer-left">
                     <h3>Rahul Srivathsan M</h3>
                     <p><i class="fas fa-video"></i> 3d artist | film editor | designer</p>
-                    <p class="footer-quote"><i class="fas fa-quote-left"></i> cinema 24/7 - living and breathing visual storytelling</p>
+                    <p class="footer-quote"><i class="fas fa-quote-left"></i> cinema 24/7 — living and breathing visual storytelling</p>
                 </div>
                 <div class="footer-center"><p>&copy; 2024 Rahul Srivathsan M. All rights reserved.</p></div>
                 <div class="footer-right">
@@ -452,15 +472,19 @@
     <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.trunk.min.js"></script>
     <script>
         window.addEventListener('load', function () {
-            const vantaDiv = document.createElement('div');
-            vantaDiv.id = 'vanta-bg';
-            document.querySelector('.hero').appendChild(vantaDiv);
             VANTA.TRUNK({
-                el: '#vanta-bg', mouseControls: false, touchControls: false,
-                gyroControls: false, minHeight: 200, minWidth: 200,
-                scale: 1.0, scaleMobile: 0.8,
-                backgroundColor: 0x000000, color: 0x67e8f9,
-                spacing: 2.0, chaos: 2.5,
+                el: '#vanta-bg',
+                mouseControls: false,
+                touchControls: false,
+                gyroControls: false,
+                minHeight: 200,
+                minWidth: 200,
+                scale: 1.0,
+                scaleMobile: 0.8,
+                backgroundColor: 0x000000,
+                color: 0xC09A5E,
+                spacing: 2.0,
+                chaos: 2.5,
             });
         });
     </script>
