@@ -430,10 +430,10 @@ window.addEventListener('load', () => {
 });
 
 const phrases = [
-    'Rahul Srivathsan',
-    '3D & VFX Artist',
-    'Aspiring Editor',
-    'Movie Lover'
+    'Rahul Srivathsan M',
+    'a 3D & VFX Artist',
+    'an aspiring Editor',
+    'obsessed with cinema'
 ];
 
 let phraseIndex = 0;
