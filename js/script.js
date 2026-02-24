@@ -219,7 +219,7 @@ scrollTopBtn.addEventListener('mouseleave', () => scrollTopBtn.style.transform =
 // ===== CUSTOM CURSOR =====
 if (window.innerWidth > 768) {
     const cursor = document.createElement('div');
-    cursor.style.cssText = `width:20px;height:20px;border:2px solid #67e8f9;border-radius:50%;position:fixed;pointer-events:none;transition:0.1s;z-index:9999;`;
+    cursor.style.cssText = `width:20px;height:20px;border:2px solid #f4d187;border-radius:50%;position:fixed;pointer-events:none;transition:0.1s;z-index:9999;`;
     document.body.appendChild(cursor);
     document.addEventListener('mousemove', e => { cursor.style.left = e.clientX - 10 + 'px'; cursor.style.top = e.clientY - 10 + 'px'; });
     document.querySelectorAll('a, button, .masonry-card, .filmo-item').forEach(el => {
@@ -232,7 +232,7 @@ if (window.innerWidth > 768) {
 window.addEventListener('load', () => {
     const pre = document.createElement('div');
     pre.style.cssText = `position:fixed;top:0;left:0;width:100%;height:100%;background:#000;display:flex;align-items:center;justify-content:center;z-index:9999;transition:opacity 0.5s ease;`;
-    pre.innerHTML = `<div style="text-align:center;"><div style="width:55px;height:55px;border:3px solid rgba(103,232,249,0.15);border-top:3px solid #67e8f9;border-radius:50%;animation:spin 1s linear infinite;"></div><p style="margin-top:16px;color:#fff;letter-spacing:3px;font-size:12px;font-family:monospace;">LOADING</p></div>`;
+    pre.innerHTML = `<div style="text-align:center;"><div style="width:55px;height:55px;border:3px solid rgba(192,154,94,0.15);border-top:3px solid #C09A5E;border-radius:50%;animation:spin 1s linear infinite;"></div><p style="margin-top:16px;color:#C09A5E;letter-spacing:3px;font-size:12px;font-family:monospace;">LOADING</p></div>`;
     const st = document.createElement('style');
     st.textContent = '@keyframes spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}';
     document.head.appendChild(st);
