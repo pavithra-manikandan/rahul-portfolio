@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -15,110 +16,85 @@
                 RSM
                 <img src="images/movie.svg" alt="logo icon" class="logo-icon">
             </a>
-            
             <button class="nav-toggle" id="navToggle">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span></span><span></span><span></span>
             </button>
             <ul class="nav-menu" id="navMenu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#journey" class="nav-link">Journey</a></li>
-                <li><a href="#work" class="nav-link">Work</a></li>
+                <li><a href="#home"    class="nav-link">home</a></li>
+                <li><a href="#about"   class="nav-link">about</a></li>
+                <li><a href="#journey" class="nav-link">journey</a></li>
+                <li><a href="#work"    class="nav-link">work</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Hero Section with Vertical Film Strip -->
+    <!-- Hero -->
     <section id="home" class="hero">
-        
         <div class="hero-background">
             <div class="floating-element element-1"></div>
             <div class="floating-element element-2"></div>
         </div>
-        
-        <!-- Vertical Film Strip - LEFT SIDE -->
         <div class="film-strip-vertical">
             <div class="film-strip-track">
-                <!-- Top 3 Works - Repeated for infinite loop -->
                 <div class="film-frame-vertical">
                     <img src="images/raghu-thatha.jpg" alt="Raghu Thatha" onerror="this.src='https://via.placeholder.com/200x280?text=Raghu+Thatha'">
                     <div class="film-label-vertical">raghu thatha</div>
                 </div>
-                
                 <div class="film-frame-vertical">
                     <img src="images/ajith.jpg" alt="Ajith Kumar" onerror="this.src='https://via.placeholder.com/200x280?text=Ajith+Kumar'">
                     <div class="film-label-vertical">ajith kumar</div>
                 </div>
-                
                 <div class="film-frame-vertical">
                     <img src="images/kuberaa.jpg" alt="Kuberaa" onerror="this.src='https://via.placeholder.com/200x280?text=Kuberaa'">
                     <div class="film-label-vertical">kuberaa</div>
                 </div>
-                
-                <!-- Duplicate for seamless loop -->
                 <div class="film-frame-vertical">
                     <img src="images/raghu-thatha.jpg" alt="Raghu Thatha" onerror="this.src='https://via.placeholder.com/200x280?text=Raghu+Thatha'">
                     <div class="film-label-vertical">raghu thatha</div>
                 </div>
-                
                 <div class="film-frame-vertical">
                     <img src="images/ajith.jpg" alt="Ajith Kumar" onerror="this.src='https://via.placeholder.com/200x280?text=Ajith+Kumar'">
                     <div class="film-label-vertical">ajith kumar</div>
                 </div>
-                
                 <div class="film-frame-vertical">
                     <img src="images/kuberaa.jpg" alt="Kuberaa" onerror="this.src='https://via.placeholder.com/200x280?text=Kuberaa'">
                     <div class="film-label-vertical">kuberaa</div>
                 </div>
             </div>
-            
-            <!-- Film perforations on sides -->
             <div class="film-perf-left"></div>
             <div class="film-perf-right"></div>
         </div>
-        
-        <!-- Hero Content - RIGHT SIDE -->
+
         <div class="hero-content-right">
             <h1 class="hero-name-new">
                 <p class="hero-greeting">Hello, I'm</p>
                 <span class="typewriter-text"></span><span class="typewriter-cursor">|</span>
             </h1>
             <p class="hero-roles">Editor | Motion Graphics Artist | Movie Buff</p>
-            
             <div class="hero-quote">
                 <i class="fas fa-quote-left"></i>
-                <p>"I'm constantly looking for ways to create visual storytelling"</p>
+                <p>Raised in Chennai ; Fluent in Blender, Premiere Pro and Cinema</p>
             </div>
-
             <div class="hero-cta">
                 <a href="#work" class="btn btn-primary">
                     <i class="fas fa-play"></i>
                     <span>view my work</span>
                 </a>
             </div>
-            
             <div class="social-links">
-                <a href="https://youtube.com/@wcstudiosoffl" target="_blank" aria-label="YouTube">
-                    <i class="fab fa-youtube"></i>
-                </a>
-                <a href="https://instagram.com/wcstudiosoffl" target="_blank" aria-label="Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="#" target="_blank" aria-label="LinkedIn">
-                    <i class="fab fa-linkedin"></i>
-                </a>
+                <a href="https://youtube.com/@wcstudiosoffl" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="https://instagram.com/wcstudiosoffl" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
             </div>
         </div>
-        
+
         <div class="scroll-indicator">
             <div class="mouse"></div>
             <span>scroll</span>
         </div>
     </section>
 
-    <!-- About Section -->
+    <!-- About -->
     <section id="about" class="about">
         <div class="container">
             <h2 class="section-title">About Me</h2>
@@ -131,9 +107,8 @@
                     </div>
                 </div>
                 <div class="about-text">
-                    <h3>Passionate Filmmaker & 3D Artist</h3>
-                    <p class="lead">Hi, I'm a film editor and motion graphics artist with a flair for the art of filmmaking. Most of all, I am  a hardworked be3cause all of this is selftaugt!</p>
-                    
+                    <!-- <h3>Passionate Filmmaker & 3D Artist</h3> -->
+                    <p class="lead">I edit films, create motion graphics, and lose track of time doing both. Everything you see here is self-taught, built frame by frame, out of pure passion for visual storytelling.</p>
                     <div class="about-highlights">
                         <div class="highlight-item">
                             <i class="fas fa-film"></i>
@@ -141,14 +116,13 @@
                         </div>
                         <div class="highlight-item">
                             <i class="fas fa-palette"></i>
-                            <span>Started designing at 8, and never really stopped. Over the years the tools got more complex, but the goal stayed the same - make something that actually feels like something.</span>
+                            <span>Started designing at 8, and never really stopped. Over the years the tools got more complex, but the goal stayed the same: make something that actually feels like something.</span>
                         </div>
                         <div class="highlight-item">
                             <i class="fas fa-video"></i>
-                            <span>From launching WC Studios at 11 to editing feature films, the thread connecting it is a simple obsession with making visuals that stick with you long after the screen goes dark.</span>
+                            <span>From launching WC Studios at 11 to editing feature films, the thread connecting it all is a simple bsession with making visuals that stick with you long after the screen goes dark.</span>
                         </div>
                     </div>
-
                     <div class="about-stats">
                         <div class="stat">
                             <i class="fab fa-youtube"></i>
@@ -171,7 +145,7 @@
         </div>
     </section>
 
-    <!-- Journey Section (Education & Skills Timeline) -->
+    <!-- Journey -->
     <section id="journey" class="journey">
         <div class="container">
             <h2 class="section-title">My Journey</h2>
@@ -180,168 +154,139 @@
                 from school corridors to cinema screens
             </p>
 
-            <!-- Education Timeline -->
+            <!-- Timeline — bigger alternating style -->
             <div class="timeline">
+
                 <div class="timeline-item" data-year="2008-2020">
-                    <div class="timeline-icon">
-                        <i class="fas fa-school"></i>
-                    </div>
+                    <div class="timeline-icon"><i class="fas fa-school"></i></div>
                     <div class="timeline-content">
                         <h3>PSBB School</h3>
-                        <p class="timeline-period">2008 - 2020</p>
+                        <p class="timeline-period">2009 - 2024 </p>
                         <p>Where it all began. Started experimenting with animation and design at age 8. Created my first YouTube channel "Wow Creations" in 6th grade.</p>
-                        <div class="timeline-badge">
-                            <i class="fas fa-star"></i>
-                            <span>the beginning</span>
+                        <div class="timeline-badge"><i class="fas fa-star"></i> the beginning</div>
+                    </div>
+                    <div class="timeline-image"><i class="fas fa-graduation-cap"></i></div>
+                </div>
+
+                                <div class="timeline-item" data-year="2023">
+                    <div class="timeline-icon"><i class="fas fa-certificate"></i></div>
+                    <div class="timeline-content">
+                        <h3>VanArts — 3D Modeling Diploma</h3>
+                        <p class="timeline-period">April 2023</p>
+                        <p><strong>Vancouver Institute of Media Arts</strong> — Mastered Autodesk Maya for character and environment modeling in animation and VFX.</p>
+                        <div class="timeline-badge"><i class="fas fa-award"></i> certified 3d artist</div>
+                        <div class="certification-image">
+                            <img src="images/vanarts-maya.jpg" alt="Maya 3D Modeling" onerror="this.src='https://via.placeholder.com/400x300?text=Maya+3D+Modeling'">
+                            <div class="cert-label">learning maya at vanarts</div>
                         </div>
                     </div>
-                    <div class="timeline-image">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
+                    <div class="timeline-image"><i class="fas fa-trophy"></i></div>
                 </div>
 
                 <div class="timeline-item" data-year="2020-2024">
-                    <div class="timeline-icon">
-                        <i class="fas fa-university"></i>
-                    </div>
+                    <div class="timeline-icon"><i class="fas fa-university"></i></div>
                     <div class="timeline-content">
                         <h3>Loyola College, Chennai</h3>
-                        <p class="timeline-period">2020 - 2024</p>
-                        <p><strong>Bachelor of Multimedia</strong> - Diving deep into film editing, 3D animation, and design. Worked on numerous projects while building WC Studios to 25K+ subscribers.</p>
+                        <p class="timeline-period">2025 — 2028</p>
+                        <p><strong>Bachelor of Multimedia</strong> — Diving deep into film editing, 3D animation, and design. </p>
                         <div class="timeline-skills">
                             <span><i class="fas fa-video"></i> film editing</span>
                             <span><i class="fas fa-cube"></i> 3d modeling</span>
                             <span><i class="fas fa-palette"></i> design</span>
                         </div>
                     </div>
-                    <div class="timeline-image">
-                        <i class="fas fa-book-open"></i>
-                    </div>
+                    <div class="timeline-image"><i class="fas fa-book-open"></i></div>
                 </div>
 
-                <div class="timeline-item" data-year="2023">
-                    <div class="timeline-icon">
-                        <i class="fas fa-certificate"></i>
-                    </div>
-                    <div class="timeline-content">
-                        <h3>VanArts - 3D Modeling Diploma</h3>
-                        <p class="timeline-period">April 2023</p>
-                        <p><strong>Vancouver Institute of Media Arts</strong> - Mastered Autodesk Maya, learning industry-standard techniques for character and environment modeling in animation and VFX.</p>
-                        <div class="timeline-badge cert-badge">
-                            <i class="fas fa-award"></i>
-                            <span>certified 3d artist</span>
-                        </div>
-                        <div class="certification-image">
-                            <img src="images/vanarts-maya.jpg" alt="Maya 3D Modeling" onerror="this.src='https://via.placeholder.com/400x300?text=Maya+3D+Modeling'">
-                            <div class="cert-label">learning maya at vanarts</div>
-                        </div>
-                    </div>
-                    <div class="timeline-image">
-                        <i class="fas fa-trophy"></i>
-                    </div>
-                </div>
+
+
             </div>
 
-            <!-- Skills Grid with Creative Icons -->
+            <!-- Skills -->
             <div class="skills-showcase">
                 <h3 class="subsection-title">
                     <i class="fas fa-toolbox"></i>
                     tools & technologies
                 </h3>
-                
-                <div class="skills-grid-creative">
-                    <div class="skill-creative" data-skill="editing">
-                        <div class="skill-icon-creative">
-                            <i class="fas fa-cut"></i>
-                        </div>
+                <div class="skills-grid-new">
+                    <div class="skill-card-new">
+                        <div class="skill-card-icon">✂</div>
                         <h4>film editing</h4>
-                        <div class="skill-tools">
+                        <div class="skill-tags">
                             <span>Premiere Pro</span>
                             <span>AVID</span>
                             <span>Final Cut</span>
                         </div>
                     </div>
-
-                    <div class="skill-creative" data-skill="3d">
-                        <div class="skill-icon-creative">
-                            <i class="fas fa-cube"></i>
-                        </div>
+                    <div class="skill-card-new">
+                        <div class="skill-card-icon">◈</div>
                         <h4>3d animation</h4>
-                        <div class="skill-tools">
+                        <div class="skill-tags">
                             <span>Blender</span>
                             <span>Maya</span>
                             <span>Unreal Engine 5</span>
                             <span>Marvelous Designer</span>
                         </div>
                     </div>
-
-                    <div class="skill-creative" data-skill="design">
-                        <div class="skill-icon-creative">
-                            <i class="fas fa-palette"></i>
-                        </div>
+                    <div class="skill-card-new">
+                        <div class="skill-card-icon">◰</div>
                         <h4>graphic design</h4>
-                        <div class="skill-tools">
+                        <div class="skill-tags">
                             <span>Photoshop</span>
                             <span>Illustrator</span>
                             <span>InDesign</span>
                         </div>
                     </div>
-
-                    <div class="skill-creative" data-skill="color">
-                        <div class="skill-icon-creative">
-                            <i class="fas fa-adjust"></i>
-                        </div>
+                    <div class="skill-card-new">
+                        <div class="skill-card-icon">◑</div>
                         <h4>color grading</h4>
-                        <div class="skill-tools">
+                        <div class="skill-tags">
                             <span>DaVinci Resolve</span>
                         </div>
-                        <div class="skill-badge">
-                            <i class="fas fa-certificate"></i>
-                            <span>certified</span>
-                        </div>
+                        <div class="skill-cert-ribbon">CERTIFIED</div>
                     </div>
-
-                    <div class="skill-creative" data-skill="vfx">
-                        <div class="skill-icon-creative">
-                            <i class="fas fa-magic"></i>
-                        </div>
+                    <div class="skill-card-new">
+                        <div class="skill-card-icon">✦</div>
                         <h4>vfx & compositing</h4>
-                        <div class="skill-tools">
+                        <div class="skill-tags">
                             <span>After Effects</span>
                             <span>Nuke</span>
                         </div>
                     </div>
-
-                    <div class="skill-creative" data-skill="sculpting">
-                        <div class="skill-icon-creative">
-                            <i class="fas fa-hammer"></i>
-                        </div>
+                    <div class="skill-card-new">
+                        <div class="skill-card-icon">◎</div>
                         <h4>digital sculpting</h4>
-                        <div class="skill-tools">
+                        <div class="skill-tags">
                             <span>ZBrush</span>
                             <span>Blender Sculpt</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Additional Certifications -->
-                <div class="certifications-list">
-                    <h4>
-                        <i class="fas fa-award"></i>
-                        additional certifications
-                    </h4>
-                    <div class="cert-badges">
-                        <div class="cert-item">
-                            <i class="fas fa-certificate"></i>
-                            <span>color grading professional</span>
+                <!-- Certifications -->
+                <div class="certs-grid">
+                    <div class="cert-card">
+                        <div class="cert-card-icon">◈</div>
+                        <div class="cert-card-body">
+                            <div class="cert-card-label">CERTIFIED</div>
+                            <h4>color grading professional</h4>
+                            <p>DaVinci Resolve</p>
                         </div>
-                        <div class="cert-item">
-                            <i class="fas fa-certificate"></i>
-                            <span>adobe certified - photoshop</span>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-card-icon">◰</div>
+                        <div class="cert-card-body">
+                            <div class="cert-card-label">CERTIFIED</div>
+                            <h4>adobe photoshop</h4>
+                            <p>Adobe Certified</p>
                         </div>
-                        <div class="cert-item">
-                            <i class="fas fa-certificate"></i>
-                            <span>unreal engine certified</span>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-card-icon">◎</div>
+                        <div class="cert-card-body">
+                            <div class="cert-card-label">CERTIFIED</div>
+                            <h4>unreal engine</h4>
+                            <p>Epic Games Certified</p>
                         </div>
                     </div>
                 </div>
@@ -349,186 +294,135 @@
         </div>
     </section>
 
-    <!-- Work Section -->
+    <!-- Work -->
     <section id="work" class="work">
         <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
-            <p class="section-subtitle">
-                <i class="fas fa-film"></i>
-                a showcase of visual storytelling
-            </p>
-            
-            <!-- Filter Buttons -->
-            <div class="filter-buttons">
-                <button class="filter-btn active" data-filter="all">
-                    <i class="fas fa-th"></i>
-                    all
-                </button>
-                <button class="filter-btn" data-filter="3d">
-                    <i class="fas fa-cube"></i>
-                    3d animation
-                </button>
-                <button class="filter-btn" data-filter="design">
-                    <i class="fas fa-palette"></i>
-                    design
-                </button>
-                <button class="filter-btn" data-filter="editing">
-                    <i class="fas fa-cut"></i>
-                    film editing
-                </button>
+            <div class="work-header">
+                <div>
+                    <div class="work-eyebrow">THE WORK</div>
+                    <h2 class="section-title" style="text-align:left;margin-bottom:0;">featured projects</h2>
+                    <div class="work-title-line"></div>
+                </div>
+                <div class="work-controls">
+                    <div class="cat-filter">
+                        <button class="cat-btn active" data-cat="all">all</button>
+                        <button class="cat-btn" data-cat="3d">3d animation</button>
+                        <button class="cat-btn" data-cat="editing">film editing</button>
+                        <button class="cat-btn" data-cat="design">design</button>
+                        <button class="cat-btn" data-cat="commercial">commercial</button>
+                    </div>
+                    <div class="view-toggle">
+                        <button class="view-btn active" data-view="masonry" title="Grid view">⊞</button>
+                        <button class="view-btn" data-view="filmography" title="List view">≡</button>
+                    </div>
+                </div>
             </div>
 
-            <!-- Work Grid -->
-            <div class="work-grid">
-                <!-- 3D Animation Projects -->
-                <div class="work-item" data-category="3d" data-project="kuberaa">
-                    <div class="work-image">
-                        <img src="images/kuberaa.jpg" alt="Kuberaa Digital Promotions" onerror="this.src='https://via.placeholder.com/400x300?text=Kuberaa'">
-                        <div class="work-overlay">
-                            <i class="fas fa-play-circle"></i>
-                            <span>VIEW PROJECT</span>
+            <!-- Masonry -->
+            <div class="work-masonry" id="masonryView">
+                <div class="masonry-row masonry-single">
+                    <div class="masonry-card masonry-wide" data-project="kuberaa" data-cat="3d">
+                        <div class="masonry-img"><img src="images/kuberaa.jpg" alt="" onerror="this.src='https://via.placeholder.com/800x300?text=Kuberaa'"></div>
+                        <div class="masonry-num">01</div>
+                        <div class="masonry-year">2024</div>
+                        <div class="masonry-info">
+                            <div class="masonry-cat">3d animation</div>
+                            <div class="masonry-title">Kuberaa</div>
+                            <div class="masonry-sub">Digital Promotions</div>
                         </div>
-                    </div>
-                    <div class="work-info">
-                        <div class="work-icon">
-                            <i class="fas fa-cube"></i>
-                        </div>
-                        <h3>Kuberaa - Digital Promotions</h3>
-                        <p class="work-category">3d animation</p>
+                        <div class="masonry-arrow">↗</div>
                     </div>
                 </div>
-
-                <div class="work-item" data-category="3d" data-project="ajith">
-                    <div class="work-image">
-                        <img src="images/ajith.jpg" alt="Ajith Kumar Birthday" onerror="this.src='https://via.placeholder.com/400x300?text=AK+Birthday'">
-                        <div class="work-overlay">
-                            <i class="fas fa-play-circle"></i>
-                            <span>VIEW PROJECT</span>
-                        </div>
+                <div class="masonry-row masonry-double">
+                    <div class="masonry-card" data-project="ajith" data-cat="3d">
+                        <div class="masonry-img"><img src="images/ajith.jpg" alt="" onerror="this.src='https://via.placeholder.com/400x260?text=Ajith'"></div>
+                        <div class="masonry-num">02</div><div class="masonry-year">2024</div>
+                        <div class="masonry-info"><div class="masonry-cat">3d animation</div><div class="masonry-title">Ajith Kumar</div><div class="masonry-sub">Birthday Tribute</div></div>
+                        <div class="masonry-arrow">↗</div>
                     </div>
-                    <div class="work-info">
-                        <div class="work-icon">
-                            <i class="fas fa-cube"></i>
-                        </div>
-                        <h3>Ajith Kumar Birthday Tribute</h3>
-                        <p class="work-category">3d animation</p>
+                    <div class="masonry-card" data-project="raghu-thatha" data-cat="editing">
+                        <div class="masonry-img"><img src="images/raghu-thatha.jpg" alt="" onerror="this.src='https://via.placeholder.com/400x260?text=Raghu+Thatha'"></div>
+                        <div class="masonry-num">03</div><div class="masonry-year">2024</div>
+                        <div class="masonry-info"><div class="masonry-cat">film editing</div><div class="masonry-title">Raghu Thatha</div><div class="masonry-sub">Feature Film</div></div>
+                        <div class="masonry-arrow">↗</div>
                     </div>
                 </div>
-
-                <div class="work-item" data-category="3d" data-project="globe-trotter">
-                    <div class="work-image">
-                        <img src="images/globe-trotter.jpg" alt="Globe Trotter Event" onerror="this.src='https://via.placeholder.com/400x300?text=Globe+Trotter'">
-                        <div class="work-overlay">
-                            <i class="fas fa-play-circle"></i>
-                            <span>VIEW PROJECT</span>
-                        </div>
+                <div class="masonry-row masonry-double">
+                    <div class="masonry-card" data-project="the-imperial" data-cat="3d">
+                        <div class="masonry-img"><img src="images/the-imperial.jpg" alt="" onerror="this.src='https://via.placeholder.com/400x260?text=The+Imperial'"></div>
+                        <div class="masonry-num">04</div><div class="masonry-year">2023</div>
+                        <div class="masonry-info"><div class="masonry-cat">3d animation</div><div class="masonry-title">The Imperial</div><div class="masonry-sub">Character Animation</div></div>
+                        <div class="masonry-arrow">↗</div>
                     </div>
-                    <div class="work-info">
-                        <div class="work-icon">
-                            <i class="fas fa-cube"></i>
-                        </div>
-                        <h3>Globe Trotter Event</h3>
-                        <p class="work-category">3d animation</p>
+                    <div class="masonry-card" data-project="puravankara" data-cat="commercial">
+                        <div class="masonry-img"><img src="images/puravankara.jpg" alt="" onerror="this.src='https://via.placeholder.com/400x260?text=Puravankara'"></div>
+                        <div class="masonry-num">05</div><div class="masonry-year">2023</div>
+                        <div class="masonry-info"><div class="masonry-cat">commercial</div><div class="masonry-title">Puravankara</div><div class="masonry-sub">Project Launch</div></div>
+                        <div class="masonry-arrow">↗</div>
                     </div>
                 </div>
-
-                <div class="work-item" data-category="3d" data-project="the-imperial">
-                    <div class="work-image">
-                        <img src="images/the-imperial.jpg" alt="The Imperial" onerror="this.src='https://via.placeholder.com/400x300?text=The+Imperial'">
-                        <div class="work-overlay">
-                            <i class="fas fa-play-circle"></i>
-                            <span>VIEW PROJECT</span>
-                        </div>
+                <div class="masonry-row masonry-double">
+                    <div class="masonry-card" data-project="poster-designs" data-cat="design">
+                        <div class="masonry-img"><img src="images/poster-designs.jpg" alt=""" onerror="this.src='https://via.placeholder.com/400x260?text=Posters'"></div>
+                        <div class="masonry-num">06</div><div class="masonry-year">2023</div>
+                        <div class="masonry-info"><div class="masonry-cat">graphic design</div><div class="masonry-title">Movie Posters</div><div class="masonry-sub">Design Collection</div></div>
+                        <div class="masonry-arrow">↗</div>
                     </div>
-                    <div class="work-info">
-                        <div class="work-icon">
-                            <i class="fas fa-cube"></i>
-                        </div>
-                        <h3>The Imperial</h3>
-                        <p class="work-category">3d animation</p>
+                    <div class="masonry-card" data-project="karnan" data-cat="3d">
+                        <div class="masonry-img"><img src="images/karnan.jpg" alt="" onerror="this.src='https://via.placeholder.com/400x260?text=Karnan'"></div>
+                        <div class="masonry-num">07</div><div class="masonry-year">2022</div>
+                        <div class="masonry-info"><div class="masonry-cat">3d animation</div><div class="masonry-title">Karnan</div><div class="masonry-sub">Motion Poster</div></div>
+                        <div class="masonry-arrow">↗</div>
                     </div>
                 </div>
+            </div>
 
-                <div class="work-item" data-category="3d" data-project="puravankara">
-                    <div class="work-image">
-                        <img src="images/puravankara.jpg" alt="Puravankara" onerror="this.src='https://via.placeholder.com/400x300?text=Puravankara'">
-                        <div class="work-overlay">
-                            <i class="fas fa-play-circle"></i>
-                            <span>VIEW PROJECT</span>
-                        </div>
-                    </div>
-                    <div class="work-info">
-                        <div class="work-icon">
-                            <i class="fas fa-video"></i>
-                        </div>
-                        <h3>Puravankara Project Launch</h3>
-                        <p class="work-category">commercial</p>
-                    </div>
+            <!-- Filmography -->
+            <div class="work-filmography" id="filmographyView" style="display:none;">
+                <div class="filmo-item" data-project="kuberaa" data-cat="3d">
+                    <span class="filmo-num">01</span>
+                    <div class="filmo-info"><div class="filmo-title">Kuberaa <span class="filmo-sub">— Digital Promotions</span></div><div class="filmo-cat">3d animation</div></div>
+                    <span class="filmo-year">2024</span><span class="filmo-arrow">→</span>
                 </div>
-
-                <!-- Design Projects -->
-                <div class="work-item" data-category="design" data-project="poster-designs">
-                    <div class="work-image">
-                        <img src="images/poster-designs.jpg" alt="Movie Poster Designs" onerror="this.src='https://via.placeholder.com/400x300?text=Poster+Designs'">
-                        <div class="work-overlay">
-                            <i class="fas fa-images"></i>
-                            <span>VIEW PROJECT</span>
-                        </div>
-                    </div>
-                    <div class="work-info">
-                        <div class="work-icon">
-                            <i class="fas fa-palette"></i>
-                        </div>
-                        <h3>Movie Poster Designs</h3>
-                        <p class="work-category">graphic design</p>
-                    </div>
+                <div class="filmo-item" data-project="ajith" data-cat="3d">
+                    <span class="filmo-num">02</span>
+                    <div class="filmo-info"><div class="filmo-title">Ajith Kumar <span class="filmo-sub">— Birthday Tribute</span></div><div class="filmo-cat">3d animation</div></div>
+                    <span class="filmo-year">2024</span><span class="filmo-arrow">→</span>
                 </div>
-
-                <!-- Film Editing -->
-                <div class="work-item" data-category="editing" data-project="raghu-thatha">
-                    <div class="work-image">
-                        <img src="images/raghu-thatha.jpg" alt="Raghu Thatha" onerror="this.src='https://via.placeholder.com/400x300?text=Raghu+Thatha'">
-                        <div class="work-overlay">
-                            <i class="fas fa-film"></i>
-                            <span>VIEW PROJECT</span>
-                        </div>
-                    </div>
-                    <div class="work-info">
-                        <div class="work-icon">
-                            <i class="fas fa-cut"></i>
-                        </div>
-                        <h3>Raghu Thatha - Feature Film</h3>
-                        <p class="work-category">film editing</p>
-                    </div>
+                <div class="filmo-item" data-project="raghu-thatha" data-cat="editing">
+                    <span class="filmo-num">03</span>
+                    <div class="filmo-info"><div class="filmo-title">Raghu Thatha <span class="filmo-sub">— Feature Film</span></div><div class="filmo-cat">film editing</div></div>
+                    <span class="filmo-year">2024</span><span class="filmo-arrow">→</span>
                 </div>
-
-                <div class="work-item" data-category="3d" data-project="karnan">
-                    <div class="work-image">
-                        <img src="images/karnan.jpg" alt="Karnan" onerror="this.src='https://via.placeholder.com/400x300?text=Karnan'">
-                        <div class="work-overlay">
-                            <i class="fas fa-play-circle"></i>
-                            <span>VIEW PROJECT</span>
-                        </div>
-                    </div>
-                    <div class="work-info">
-                        <div class="work-icon">
-                            <i class="fas fa-cube"></i>
-                        </div>
-                        <h3>Karnan Motion Poster</h3>
-                        <p class="work-category">3d animation</p>
-                    </div>
+                <div class="filmo-item" data-project="the-imperial" data-cat="3d">
+                    <span class="filmo-num">04</span>
+                    <div class="filmo-info"><div class="filmo-title">The Imperial <span class="filmo-sub">— Character Animation</span></div><div class="filmo-cat">3d animation</div></div>
+                    <span class="filmo-year">2023</span><span class="filmo-arrow">→</span>
+                </div>
+                <div class="filmo-item" data-project="puravankara" data-cat="commercial">
+                    <span class="filmo-num">05</span>
+                    <div class="filmo-info"><div class="filmo-title">Puravankara <span class="filmo-sub">— Project Launch</span></div><div class="filmo-cat">commercial</div></div>
+                    <span class="filmo-year">2023</span><span class="filmo-arrow">→</span>
+                </div>
+                <div class="filmo-item" data-project="poster-designs" data-cat="design">
+                    <span class="filmo-num">06</span>
+                    <div class="filmo-info"><div class="filmo-title">Movie Posters <span class="filmo-sub">— Design Collection</span></div><div class="filmo-cat">graphic design</div></div>
+                    <span class="filmo-year">2023</span><span class="filmo-arrow">→</span>
+                </div>
+                <div class="filmo-item" data-project="karnan" data-cat="3d">
+                    <span class="filmo-num">07</span>
+                    <div class="filmo-info"><div class="filmo-title">Karnan <span class="filmo-sub">— Motion Poster</span></div><div class="filmo-cat">3d animation</div></div>
+                    <span class="filmo-year">2022</span><span class="filmo-arrow">→</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Project Modal -->
+    <!-- Modal -->
     <div id="projectModal" class="modal">
         <div class="modal-content">
             <button class="modal-close" id="modalClose">&times;</button>
-            <div class="modal-body" id="modalBody">
-                <!-- Content will be loaded dynamically -->
-            </div>
+            <div class="modal-body" id="modalBody"></div>
         </div>
     </div>
 
@@ -538,18 +432,10 @@
             <div class="footer-content">
                 <div class="footer-left">
                     <h3>Rahul Srivathsan M</h3>
-                    <p>
-                        <i class="fas fa-video"></i>
-                        3d artist | film editor | designer
-                    </p>
-                    <p class="footer-quote">
-                        <i class="fas fa-quote-left"></i>
-                        cinema 24/7 - living and breathing visual storytelling
-                    </p>
+                    <p><i class="fas fa-video"></i> 3d artist | film editor | designer</p>
+                    <p class="footer-quote"><i class="fas fa-quote-left"></i> cinema 24/7 - living and breathing visual storytelling</p>
                 </div>
-                <div class="footer-center">
-                    <p>&copy; 2024 Rahul Srivathsan M. All rights reserved.</p>
-                </div>
+                <div class="footer-center"><p>&copy; 2024 Rahul Srivathsan M. All rights reserved.</p></div>
                 <div class="footer-right">
                     <div class="footer-social">
                         <a href="https://youtube.com/@wcstudiosoffl" target="_blank"><i class="fab fa-youtube"></i></a>
@@ -559,39 +445,24 @@
                 </div>
             </div>
         </div>
-
-    
+    </footer>
 
     <script src="js/script.js"></script>
-
-    <!-- Vanta Background — MUST be after <body> content, before </body> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.trunk.min.js"></script>
     <script>
-
         window.addEventListener('load', function () {
-
             const vantaDiv = document.createElement('div');
             vantaDiv.id = 'vanta-bg';
-            // CSS handles all positioning — just append to hero
             document.querySelector('.hero').appendChild(vantaDiv);
-
             VANTA.TRUNK({
-                el: '#vanta-bg',
-                mouseControls: false,
-                touchControls: false,
-                gyroControls: false,
-                minHeight: 200,
-                minWidth: 200,
-                scale: 1.0,
-                scaleMobile: 0.8,
-                backgroundColor: 0x000000,
-                color: 0x67e8f9,
-                spacing: 2.0,
-                chaos: 2.5,
+                el: '#vanta-bg', mouseControls: false, touchControls: false,
+                gyroControls: false, minHeight: 200, minWidth: 200,
+                scale: 1.0, scaleMobile: 0.8,
+                backgroundColor: 0x000000, color: 0x67e8f9,
+                spacing: 2.0, chaos: 2.5,
             });
-        });  
-   
-   </script>
+        });
+    </script>
 </body>
 </html>
