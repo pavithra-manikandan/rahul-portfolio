@@ -429,4 +429,44 @@ window.addEventListener('load', () => {
     }, 1500);
 });
 
+const phrases = [
+    'Rahul Srivathsan',
+    '3D & VFX Artist',
+    'Aspiring Editor',
+    'Movie Lover'
+];
+
+let phraseIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+
+const el = document.querySelector('.typewriter-text');
+
+function typeWriter() {
+    const current = phrases[phraseIndex];
+
+    if (isDeleting) {
+        el.textContent = current.substring(0, charIndex - 1);
+        charIndex--;
+    } else {
+        el.textContent = current.substring(0, charIndex + 1);
+        charIndex++;
+    }
+
+    let speed = isDeleting ? 60 : 100;
+
+    if (!isDeleting && charIndex === current.length) {
+        speed = 1800;
+        isDeleting = true;
+    } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        phraseIndex = (phraseIndex + 1) % phrases.length;
+        speed = 400;
+    }
+
+    setTimeout(typeWriter, speed);
+}
+
+document.addEventListener('DOMContentLoaded', typeWriter);
+
 console.log('%c Portfolio Loaded Successfully! ✨', 'color: #ff3366; font-size: 16px; font-weight: bold;');
