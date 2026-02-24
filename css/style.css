@@ -90,8 +90,8 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background: var(--dark-bg);  
-    backdrop-filter: blur(12px);
+    background: rgba(61, 52, 33, 0.15);     
+    backdrop-filter: blur(11px);
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(192, 154, 94, 0.12);
     z-index: 1000;
@@ -193,6 +193,7 @@ body {
     z-index: 0;
     opacity: 0.40;
     pointer-events: none;
+    mix-blend-mode: screen; 
 }
 
 /* ===== FILM STRIP ===== */
