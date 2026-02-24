@@ -431,7 +431,8 @@ window.addEventListener('load', () => {
 
 const phrases = [
     'Rahul Srivathsan M',
-    'a 3D & VFX Artist',
+    'a Designer',
+    'a 3D/VFX Artist',
     'an aspiring Editor',
     'obsessed with cinema'
 ];
