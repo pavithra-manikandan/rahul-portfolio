@@ -11,7 +11,11 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="#home" class="logo">rahul</a>
+            <a href="#home" class="logo">
+                RSM
+                <img src="images/movie.svg" alt="logo icon" class="logo-icon">
+            </a>
+            
             <button class="nav-toggle" id="navToggle">
                 <span></span>
                 <span></span>
@@ -28,8 +32,6 @@
 
     <!-- Hero Section with Vertical Film Strip -->
     <section id="home" class="hero">
-        <!-- Lottie Animated Background -->
-        <div id="lottie-background"></div>
         
         <div class="hero-background">
             <div class="floating-element element-1"></div>
@@ -556,28 +558,39 @@
                 </div>
             </div>
         </div>
-    <!-- Lottie Library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
+
     
-    <!-- Lottie Background Animation -->
-    <script>
-        // Wait for page to load
-        window.addEventListener('load', function() {
-            try {
-                lottie.loadAnimation({
-                    container: document.getElementById('lottie-background'),
-                    renderer: 'svg',
-                    loop: true,
-                    autoplay: true,
-                    path: 'animations/background.json'  // Changed from .lottie to .json
-                });
-                console.log('Lottie animation loaded successfully!');
-            } catch (error) {
-                console.error('Lottie animation failed to load:', error);
-            }
-        });
-    </script>
 
     <script src="js/script.js"></script>
+
+    <!-- Vanta Background — MUST be after <body> content, before </body> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.trunk.min.js"></script>
+    <script>
+
+        window.addEventListener('load', function () {
+
+            const vantaDiv = document.createElement('div');
+            vantaDiv.id = 'vanta-bg';
+            // CSS handles all positioning — just append to hero
+            document.querySelector('.hero').appendChild(vantaDiv);
+
+            VANTA.TRUNK({
+                el: '#vanta-bg',
+                mouseControls: false,
+                touchControls: false,
+                gyroControls: false,
+                minHeight: 200,
+                minWidth: 200,
+                scale: 1.0,
+                scaleMobile: 0.8,
+                backgroundColor: 0x000000,
+                color: 0x67e8f9,
+                spacing: 2.0,
+                chaos: 2.5,
+            });
+        });  
+   
+   </script>
 </body>
 </html>

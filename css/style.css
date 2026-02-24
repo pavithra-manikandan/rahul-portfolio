@@ -181,6 +181,14 @@ body {
     text-decoration: none;
     letter-spacing: 2px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    gap: 10px;  
+}
+
+.logo-icon {
+    width: 28px;        /* adjust size */
+    height: 30px;
+    filter: invert(1);  /* if it's black and you need it white */
+    justify-content: center;
 }
 
 .nav-menu {
@@ -240,89 +248,80 @@ body {
 }
 
 /* ===== HERO SECTION - SPLIT LAYOUT ===== */
+/* ===== HERO — 2 COLUMN, ANIMATION OVERLAPS FROM BOTTOM-RIGHT ===== */
 .hero {
     min-height: 100vh;
     display: grid;
     grid-template-columns: 250px 1fr;
     background: var(--darker-bg);
     position: relative;
-    padding: 80px 0;
+    padding: 10px 0;
     overflow: hidden;
 }
 
-/* ===== LOTTIE ANIMATED BACKGROUND ===== */
-#lottie-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-    opacity: 0.5;
-    pointer-events: none;
+.film-strip-vertical {
+    grid-column: 1;
+    grid-row: 1;
+    position: relative;
+    z-index: 2;
 }
 
-.hero-background {
+.hero-content-right {
+    grid-column: 2;
+    grid-row: 1;
+    position: relative;
+    z-index: 2;               /* sits ABOVE the animation */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 120px 450px;
+}
+
+/* Name fits on one line */
+.name-large {
+    font-size: 3.8rem;
+    white-space: nowrap;      /* force single line */
+}
+
+/* Animation — purely decorative, bottom-right corner */
+#vanta-bg {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    bottom: 0%;             /* crop bottom half below fold */
+    right: -35%;              /* crop right edge off screen */
+    width: 80%;               /* size of the full circle */
+    height: 120%;             /* tall enough to stay circular */
+    z-index: 1;               /* behind text, above black bg */
+    opacity: 0.55;
+    pointer-events: none;
     overflow: hidden;
-    z-index: 0;
-    pointer-events: none;
-    display: none;
 }
 
-.floating-element {
+.scroll-indicator {
     position: absolute;
-    border-radius: 50%;
-    filter: blur(80px);
-    opacity: 0;
-    animation: float 20s infinite ease-in-out;
-    display: none;
+    z-index: 3;
 }
 
-.element-1 {
-    width: 400px;
-    height: 400px;
-    background: var(--primary-color);
-    top: 10%;
-    right: 10%;
-    animation-delay: 0s;
+/* Mobile */
+@media (max-width: 768px) {
+    .hero {
+        grid-template-columns: 1fr;
+    }
+    .name-large {
+        font-size: 2.4rem;
+        white-space: normal;
+    }
+    #vanta-bg {
+        display: none;
+    }
 }
 
-.element-2 {
-    width: 400px;
-    height: 400px;
-    background: var(--accent-color);
-    bottom: 10%;
-    right: 30%;
-    animation-delay: 7s;
-}
-
-@keyframes float {
-    0%, 100% {
-        transform: translate(0, 0);
-    }
-    33% {
-        transform: translate(60px, -60px);
-    }
-    66% {
-        transform: translate(-60px, 60px);
-    }
-}
 
 /* ===== VERTICAL FILM STRIP - LEFT SIDE ===== */
 .film-strip-vertical {
+    z-index: 2;
     position: relative;
-    width: 250px;
-    height: 100vh;
-    background: linear-gradient(180deg, #1a1a1a 0%, #0d0d0d 100%);
-    border-right: 3px solid #333;
-    overflow: hidden;
-    z-index: 1;
 }
+
 
 .film-strip-track {
     display: flex;
@@ -423,22 +422,13 @@ body {
     border-radius: 2px;
 }
 
-/* ===== HERO CONTENT - RIGHT SIDE ===== */
-.hero-content-right {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 0 80px;
-    position: relative;
-    z-index: 2;
-}
+
 
 .hero-name-new {
     margin-bottom: 2rem;
 }
 
-.name-large {
+/* .name-large {
     display: block;
     font-size: 5rem;
     font-weight: 400;
@@ -447,7 +437,7 @@ body {
     letter-spacing: 3px;
     font-family: 'Newsreader', serif;
     text-shadow: 0 0 60px rgba(103, 232, 249, 0.4);
-}
+} */
 
 .hero-roles {
     font-size: 1.3rem;
@@ -530,6 +520,8 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     font-weight: 300;
 }
+
+
 
 .mouse {
     width: 25px;
@@ -848,6 +840,8 @@ body {
 }
 
 .certification-image {
+    width: 140px;
+    height: 120px;
     margin-top: 1.5rem;
     border-radius: 15px;
     overflow: hidden;
@@ -1415,13 +1409,6 @@ body {
         padding: 30px 25px;
     }
     
-    .hero-content-right {
-        padding: 0 50px;
-    }
-    
-    .name-large {
-        font-size: 4rem;
-    }
     
     .about-content {
         grid-template-columns: 1fr;
@@ -1493,11 +1480,6 @@ body {
         display: none;
     }
     
-    .hero-content-right {
-        padding: 0 20px;
-        align-items: center;
-        text-align: center;
-    }
     
     .name-large {
         font-size: 3rem;
