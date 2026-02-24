@@ -13,7 +13,7 @@
     font-style: italic;
 }
 
-/* ===== VARIABLES - ICE BLUE THEME ===== */
+/* ===== VARIABLES ===== */
 :root {
     --primary-color: #67e8f9;
     --secondary-color: #22d3ee;
@@ -138,9 +138,7 @@ body {
     transition: var(--transition);
 }
 
-.btn-primary:hover::before {
-    left: 0;
-}
+.btn-primary:hover::before { left: 0; }
 
 .btn-primary span,
 .btn-primary i {
@@ -175,20 +173,21 @@ body {
 }
 
 .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     font-size: 1.3rem;
     font-weight: 400;
     color: var(--text-white);
     text-decoration: none;
     letter-spacing: 2px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    gap: 10px;  
 }
 
 .logo-icon {
-    width: 28px;        /* adjust size */
+    width: 28px;
     height: 30px;
-    filter: invert(1);  /* if it's black and you need it white */
-    justify-content: center;
+    filter: invert(1);
 }
 
 .nav-menu {
@@ -225,9 +224,7 @@ body {
     color: var(--primary-color);
 }
 
-.nav-link:hover::after {
-    width: 100%;
-}
+.nav-link:hover::after { width: 100%; }
 
 .nav-toggle {
     display: none;
@@ -247,10 +244,11 @@ body {
     border-radius: 3px;
 }
 
-/* ===== HERO SECTION - SPLIT LAYOUT ===== */
-/* ===== HERO — 2 COLUMN, ANIMATION OVERLAPS FROM BOTTOM-RIGHT ===== */
+/* ===== HERO SECTION ===== */
 .hero {
     min-height: 100vh;
+    max-height: 100vh;
+    height: 100vh;
     display: grid;
     grid-template-columns: 250px 1fr;
     background: var(--darker-bg);
@@ -264,65 +262,38 @@ body {
     grid-row: 1;
     position: relative;
     z-index: 2;
+    background: linear-gradient(180deg, #1a1a1a 0%, #0d0d0d 100%);
+    border-right: 3px solid #333;
+    overflow: hidden;
+    width: 250px;
+    height: 100vh;
 }
 
 .hero-content-right {
     grid-column: 2;
     grid-row: 1;
     position: relative;
-    z-index: 2;               /* sits ABOVE the animation */
+    z-index: 2;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0 120px 450px;
+    padding: 100px 60px 0; 
 }
 
-/* Name fits on one line */
-.name-large {
-    font-size: 3.8rem;
-    white-space: nowrap;      /* force single line */
-}
-
-/* Animation — purely decorative, bottom-right corner */
+/* Vanta animation — bottom-right decorative */
 #vanta-bg {
     position: absolute;
-    bottom: 0%;             /* crop bottom half below fold */
-    right: -35%;              /* crop right edge off screen */
-    width: 80%;               /* size of the full circle */
-    height: 120%;             /* tall enough to stay circular */
-    z-index: 1;               /* behind text, above black bg */
+    bottom: -20%;
+    right: -25%;
+    width: 60%;
+    height: 120%;
+    z-index: 1;
     opacity: 0.55;
     pointer-events: none;
     overflow: hidden;
 }
 
-.scroll-indicator {
-    position: absolute;
-    z-index: 3;
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-    .hero {
-        grid-template-columns: 1fr;
-    }
-    .name-large {
-        font-size: 2.4rem;
-        white-space: normal;
-    }
-    #vanta-bg {
-        display: none;
-    }
-}
-
-
-/* ===== VERTICAL FILM STRIP - LEFT SIDE ===== */
-.film-strip-vertical {
-    z-index: 2;
-    position: relative;
-}
-
-
+/* ===== FILM STRIP ===== */
 .film-strip-track {
     display: flex;
     flex-direction: column;
@@ -336,15 +307,10 @@ body {
 }
 
 @keyframes scroll-vertical {
-    0% {
-        transform: translateY(0);
-    }
-    100% {
-        transform: translateY(calc(-210px * 3 - 75px));
-    }
+    0%   { transform: translateY(0); }
+    100% { transform: translateY(calc(-210px * 3 - 75px)); }
 }
 
-/* Film Frames - Vertical */
 .film-frame-vertical {
     position: relative;
     width: 180px;
@@ -385,7 +351,6 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
-/* Film Perforations - Vertical */
 .film-perf-left,
 .film-perf-right {
     position: absolute;
@@ -399,13 +364,8 @@ body {
     z-index: 2;
 }
 
-.film-perf-left {
-    left: 10px;
-}
-
-.film-perf-right {
-    right: 10px;
-}
+.film-perf-left { left: 10px; }
+.film-perf-right { right: 10px; }
 
 .film-perf-left::before,
 .film-perf-right::before {
@@ -414,30 +374,28 @@ body {
     height: 100%;
     background: repeating-linear-gradient(
         to bottom,
-        #000 0px,
-        #000 10px,
-        transparent 10px,
-        transparent 18px
+        #000 0px, #000 10px,
+        transparent 10px, transparent 18px
     );
     border-radius: 2px;
 }
 
-
-
+/* ===== HERO CONTENT ===== */
 .hero-name-new {
     margin-bottom: 2rem;
 }
 
-/* .name-large {
+.name-large {
     display: block;
-    font-size: 5rem;
+    font-size: 3.8rem;
     font-weight: 400;
     color: var(--primary-color);
     line-height: 1.1;
     letter-spacing: 3px;
+    white-space: nowrap;
     font-family: 'Newsreader', serif;
     text-shadow: 0 0 60px rgba(103, 232, 249, 0.4);
-} */
+}
 
 .hero-roles {
     font-size: 1.3rem;
@@ -509,19 +467,18 @@ body {
 .scroll-indicator {
     position: absolute;
     bottom: 40px;
-    right: 80px;
+    right: 625px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     color: var(--text-gray);
     font-size: 0.75rem;
     letter-spacing: 1px;
-    z-index: 2;
+    z-index: 3;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     font-weight: 300;
 }
-
-
 
 .mouse {
     width: 25px;
@@ -542,18 +499,12 @@ body {
     top: 8px;
     left: 50%;
     transform: translateX(-50%);
-    animation: scroll 2s infinite;
+    animation: scrollMouse 2s infinite;
 }
 
-@keyframes scroll {
-    0% {
-        top: 8px;
-        opacity: 1;
-    }
-    100% {
-        top: 20px;
-        opacity: 0;
-    }
+@keyframes scrollMouse {
+    0%   { top: 8px;  opacity: 1; }
+    100% { top: 20px; opacity: 0; }
 }
 
 /* ===== ABOUT SECTION ===== */
@@ -695,7 +646,7 @@ body {
     font-size: 0.9rem;
 }
 
-/* ===== JOURNEY/TIMELINE SECTION ===== */
+/* ===== JOURNEY / TIMELINE ===== */
 .journey {
     padding: 100px 20px;
     background: var(--darker-bg);
@@ -728,13 +679,8 @@ body {
     align-items: center;
 }
 
-.timeline-item:nth-child(even) .timeline-content {
-    order: 3;
-}
-
-.timeline-item:nth-child(even) .timeline-image {
-    order: 1;
-}
+.timeline-item:nth-child(even) .timeline-content { order: 3; }
+.timeline-item:nth-child(even) .timeline-image   { order: 1; }
 
 .timeline-icon {
     width: 80px;
@@ -822,9 +768,7 @@ body {
     font-weight: 400;
 }
 
-.timeline-skills span i {
-    color: var(--primary-color);
-}
+.timeline-skills span i { color: var(--primary-color); }
 
 .timeline-image {
     width: 100px;
@@ -868,7 +812,7 @@ body {
     text-align: center;
 }
 
-/* ===== SKILLS SHOWCASE ===== */
+/* ===== SKILLS ===== */
 .skills-showcase {
     max-width: 1000px;
     margin: 0 auto;
@@ -955,7 +899,7 @@ body {
     font-weight: 500;
 }
 
-/* ===== CERTIFICATIONS LIST ===== */
+/* ===== CERTIFICATIONS ===== */
 .certifications-list {
     background: var(--card-bg);
     padding: 3rem;
@@ -1040,10 +984,6 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
-.filter-btn i {
-    font-size: 1rem;
-}
-
 .filter-btn:hover,
 .filter-btn.active {
     background: var(--ice-gradient);
@@ -1101,9 +1041,7 @@ body {
     transition: var(--transition);
 }
 
-.work-item:hover .work-overlay {
-    opacity: 1;
-}
+.work-item:hover .work-overlay { opacity: 1; }
 
 .work-overlay i {
     font-size: 3rem;
@@ -1117,9 +1055,7 @@ body {
     letter-spacing: 2px;
 }
 
-.work-item:hover .work-image img {
-    transform: scale(1.1);
-}
+.work-item:hover .work-image img { transform: scale(1.1); }
 
 .work-info {
     padding: 1.5rem;
@@ -1214,9 +1150,7 @@ body {
     transform: rotate(90deg);
 }
 
-.modal-body {
-    padding: 3rem;
-}
+.modal-body { padding: 3rem; }
 
 .modal-body h2 {
     font-size: 2.5rem;
@@ -1328,9 +1262,7 @@ body {
     font-weight: 300;
 }
 
-.footer-right {
-    text-align: right;
-}
+.footer-right { text-align: right; }
 
 .footer-social {
     display: flex;
@@ -1360,77 +1292,54 @@ body {
 
 /* ===== ANIMATIONS ===== */
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }
 
 @keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(30px); }
+    to   { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes slideUp {
-    from {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(50px); }
+    to   { opacity: 1; transform: translateY(0); }
 }
 
-/* ===== RESPONSIVE DESIGN ===== */
+/* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {
     .hero {
         grid-template-columns: 200px 1fr;
     }
-    
+
     .film-strip-vertical {
         width: 200px;
     }
-    
+
     .film-frame-vertical {
         width: 140px;
         height: 170px;
     }
-    
+
     .film-strip-track {
         padding: 30px 25px;
     }
-    
-    
+
     .about-content {
         grid-template-columns: 1fr;
         gap: 3rem;
     }
 
-    .timeline::before {
-        left: 40px;
-    }
+    .timeline::before { left: 40px; }
 
     .timeline-item {
         grid-template-columns: auto 1fr;
         gap: 2rem;
     }
 
-    .timeline-image {
-        display: none;
-    }
+    .timeline-image { display: none; }
 
-    .timeline-item:nth-child(even) .timeline-content {
-        order: 2;
-    }
+    .timeline-item:nth-child(even) .timeline-content { order: 2; }
 
     .footer-content {
         grid-template-columns: 1fr;
@@ -1438,19 +1347,12 @@ body {
         gap: 2rem;
     }
 
-    .footer-right {
-        text-align: center;
-    }
-
-    .footer-social {
-        justify-content: center;
-    }
+    .footer-right { text-align: center; }
+    .footer-social { justify-content: center; }
 }
 
 @media (max-width: 768px) {
-    .nav-toggle {
-        display: flex;
-    }
+    .nav-toggle { display: flex; }
 
     .nav-menu {
         position: fixed;
@@ -1467,97 +1369,65 @@ body {
         gap: 1.5rem;
     }
 
-    .nav-menu.active {
-        left: 0;
-    }
+    .nav-menu.active { left: 0; }
 
     .hero {
         grid-template-columns: 1fr;
         padding: 100px 20px 50px;
+        min-height: 100vh;
+        max-height: 100vh;
+        height: 100vh;
     }
-    
-    .film-strip-vertical {
-        display: none;
+
+    .film-strip-vertical { display: none; }
+
+    .hero-content-right {
+        padding: 0 20px;
+        align-items: center;
+        text-align: center;
     }
-    
-    
+
     .name-large {
-        font-size: 3rem;
+        font-size: 2.4rem;
+        white-space: normal;
     }
-    
+
+    #vanta-bg { display: none; }
+
     .hero-quote {
         padding-left: 0;
         border-left: none;
         border-top: 3px solid var(--primary-color);
         padding-top: 1.5rem;
     }
-    
+
     .hero-quote i {
         position: static;
         display: block;
         margin-bottom: 0.5rem;
     }
-    
+
     .scroll-indicator {
         right: 50%;
         transform: translateX(50%);
     }
 
-    .section-title {
-        font-size: 2.5rem;
-    }
+    .section-title { font-size: 2.5rem; }
+    .work-grid { grid-template-columns: 1fr; }
+    .about-stats { grid-template-columns: 1fr; }
+    .skills-grid-creative { grid-template-columns: 1fr; }
 
-    .work-grid {
-        grid-template-columns: 1fr;
-    }
+    .modal-content { width: 95%; margin: 1rem; }
+    .modal-body { padding: 2rem 1.5rem; }
 
-    .about-stats {
-        grid-template-columns: 1fr;
-    }
-
-    .skills-grid-creative {
-        grid-template-columns: 1fr;
-    }
-
-    .modal-content {
-        width: 95%;
-        margin: 1rem;
-    }
-
-    .modal-body {
-        padding: 2rem 1.5rem;
-    }
-
-    .timeline-icon {
-        width: 60px;
-        height: 60px;
-        font-size: 1.5rem;
-    }
-
-    .timeline::before {
-        left: 30px;
-    }
+    .timeline-icon { width: 60px; height: 60px; font-size: 1.5rem; }
+    .timeline::before { left: 30px; }
 }
 
 @media (max-width: 480px) {
-    .name-large {
-        font-size: 2.2rem;
-    }
-
-    .hero-roles {
-        font-size: 1rem;
-    }
-    
-    .hero-quote p {
-        font-size: 1.1rem;
-    }
-
-    .btn {
-        padding: 12px 25px;
-        font-size: 0.85rem;
-    }
-
-    .section-title {
-        font-size: 2rem;
-    }
+    .name-large { font-size: 2.2rem; }
+    .hero-roles { font-size: 1rem; }
+    .hero-quote p { font-size: 1.1rem; }
+    .btn { padding: 12px 25px; font-size: 0.85rem; }
+    .section-title { font-size: 2rem; }
 }
