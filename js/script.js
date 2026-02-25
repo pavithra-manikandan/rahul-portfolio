@@ -285,4 +285,17 @@ function typeWriter() {
 }
 document.addEventListener('DOMContentLoaded', typeWriter);
 
+// ===== JOURNEY PROGRESS BAR =====
+const journeySection = document.getElementById('journey');
+const progressBar = document.getElementById('journeyProgress');
+
+window.addEventListener('scroll', () => {
+    if (!journeySection || !progressBar) return;
+    const top    = journeySection.offsetTop;
+    const height = journeySection.offsetHeight;
+    const scrolled = window.pageYOffset - top;
+    const pct = Math.min(Math.max((scrolled / height) * 100, 0), 100);
+    progressBar.style.width = pct + '%';
+});
+
 console.log('%c Portfolio Loaded ✨', 'color: #f5edcb; font-size: 16px; font-weight: bold;');
