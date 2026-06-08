@@ -98,7 +98,8 @@
   <!-- RIGHT COLUMN (col 2) — vanta bg + slideshow + intro -->
   <div class="hero-right-col">
 
-    <div id="vanta-bg"></div>
+    <!-- <div id="vanta-bg"></div> -->
+    <img src="images/WC-BG-LOGO.png" alt="" class="hero-wc-bg">
 
     <!-- SLIDESHOW top 38% -->
     <div class="hero-slideshow" id="heroSlideshow">
@@ -464,8 +465,8 @@
   </div>
 </footer>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.trunk.min.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.trunk.min.js"></script> -->
 <script>
 const projectData = {
   'kuberaa':        { title:'Kuberaa', category:'3D Animation', description:'Created stunning 3D promotional content for the film "Kuberaa" featuring Dhanush. Intricate character animations, cloth simulation using Marvelous Designer, and environment modeling in Blender.', videoUrl:'https://www.youtube.com/embed/dQw4w9WgXcQ', tags:['Blender','3D Modeling','Animation','Marvelous Designer','Character Design'], images:['images/kuberaa-1.jpg','images/kuberaa-2.jpg','images/kuberaa-3.jpg'] },
@@ -477,12 +478,12 @@ const projectData = {
   'karnan':         { title:'Karnan Motion Poster', category:'3D Animation', description:'My first 3D animation project. Background built in Blender with destruction simulation. Sword modeled from scratch with metallic materials. Composited and color graded in Blender.', videoUrl:'https://www.youtube.com/embed/dQw4w9WgXcQ', tags:['First Project','Motion Graphics','Blender','Compositor','VFX'], images:['images/karnan-1.jpg','images/karnan-2.jpg'] }
 };
 
-// VANTA
-window.addEventListener('load', () => {
-  if (typeof VANTA !== 'undefined') {
-    VANTA.TRUNK({ el:'#vanta-bg', mouseControls:false, touchControls:false, gyroControls:false, minHeight:200, minWidth:200, scale:1.0, scaleMobile:0.8, backgroundColor:0x0a0a0a, color:0xD4B483, spacing:2.0, chaos:3 });
-  }
-});
+// // VANTA
+// window.addEventListener('load', () => {
+//   if (typeof VANTA !== 'undefined') {
+//     VANTA.TRUNK({ el:'#vanta-bg', mouseControls:false, touchControls:false, gyroControls:false, minHeight:200, minWidth:200, scale:1.0, scaleMobile:0.8, backgroundColor:0x0a0a0a, color:0xD4B483, spacing:2.0, chaos:3 });
+//   }
+// });
 
 // MOBILE NAV
 const navToggle = document.getElementById('navToggle');
