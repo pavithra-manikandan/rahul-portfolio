@@ -120,6 +120,7 @@ body  {
   text-decoration:none; letter-spacing:2px; font-family:var(--font-serif);
 }
 .logo-icon { width:22px; filter:brightness(0) invert(1); opacity:0.7; }
+.logo-icon2 { margin-left: -25%; height: 70px; width: auto; opacity: 1; color: var(--gold-shimmer); }
 .nav-menu { display:flex; list-style:none; gap:3.5rem; }
 .nav-link {
   color:rgba(255,255,255,0.45); text-decoration:none;
@@ -146,7 +147,7 @@ body  {
 .hero {
   min-height:100vh; height:100vh;
   display:grid; grid-template-columns:220px 1fr;
-  background:#0A0A0A; position:relative; overflow:hidden;
+  background:#0A0A0A; position:relative; overflow:hidden; z-index:10;
 }
 
 /* vanta lives inside the right column, positioned to the right */
@@ -157,7 +158,12 @@ body  {
 }
 
 .bg-glow {
-  display:none;
+  position:fixed; top:50%; left:50%; transform:translate(-50%,-50%);
+  width:800px; height:800px;
+  background:radial-gradient(ellipse at center,
+    rgba(212,180,131,0.18) 0%, rgba(192,154,94,0.10) 35%, rgba(192,154,94,0.02) 65%, transparent 80%);
+  pointer-events:none; z-index:5;
+  animation:glowPulse 5s ease-in-out infinite;
 }
 
 /* ---- Film strip (col 1 — LEFT) ---- */
@@ -348,17 +354,8 @@ body  {
 .skills-section,
 .about,
 .journey,
-.work { padding:7rem 0; background:#0A0A0A; position:relative; z-index:1; }
-.skills-section { border-top:1px solid rgba(192,154,94,0.08); padding-top:8rem; position:relative; overflow:hidden; }
-.skills-section::before {
-  content:'';
-  position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
-  width:900px; height:900px;
-  background:radial-gradient(ellipse at center,
-    rgba(212,180,131,0.15) 0%, rgba(192,154,94,0.08) 35%, rgba(192,154,94,0.02) 65%, transparent 80%);
-  pointer-events:none; z-index:0;
-  animation:glowPulse 5s ease-in-out infinite;
-}
+.work { padding:7rem 0; background:#0A0A0A; position:relative; overflow:hidden; }
+.skills-section { border-top:1px solid rgba(192,154,94,0.08); padding-top:8rem; }
 
 /* ============================================================
    TOOLS & TECH
